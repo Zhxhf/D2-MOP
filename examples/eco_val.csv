@@ -1,0 +1,3 @@
+video,frame_count,width,height,question,answer,qid,type,a0,a1,a2,a3,a4
+eco_0001,8,0,0,What does the animal do after entering the monitored area,1,1,TN,leave immediately,stay near the water source,climb a tree,fight another animal,sleep
+eco_0002,8,0,0,Do the two animals interact near the tree,0,1,CH,"yes, they interact",no animal appears,the animal drinks water,the animal leaves immediately,unknown

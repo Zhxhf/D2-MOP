@@ -1,0 +1,14 @@
+{
+  "eco_0001": [
+    "A deer appears at the edge of the monitored area.",
+    "The deer enters the monitored area and walks toward the water source.",
+    "The deer stays near the water source.",
+    "The deer leaves the monitored area."
+  ],
+  "eco_0002": [
+    "A monkey appears near a tree.",
+    "The monkey approaches another monkey.",
+    "The two monkeys interact near the tree.",
+    "One monkey moves away."
+  ]
+}
