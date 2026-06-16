@@ -1,0 +1,16 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 6, in <module>
+    from tqdm import tqdm
+ModuleNotFoundError: No module named 'tqdm'
+Traceback (most recent call last):
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 6, in <module>
+    from tqdm import tqdm
+ModuleNotFoundError: No module named 'tqdm'
+Traceback (most recent call last):
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 6, in <module>
+    from tqdm import tqdm
+ModuleNotFoundError: No module named 'tqdm'
+usage: collect_article2_results.py [-h] --input_dir INPUT_DIR --out_csv
+                                   OUT_CSV --out_md OUT_MD
+collect_article2_results.py: error: the following arguments are required: --input_dir, --out_csv, --out_md

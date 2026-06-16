@@ -1,0 +1,42 @@
+===== MOP extra dataset check =====
+time: Fri Jun  5 03:18:48 UTC 2026
+
+===== 1. Check Video-MME annotations =====
+[OK] /home/ubuntu/videomind/VideoMind/datasets/video_mme/videomme_ml50_scvm.json
+rows: 50
+keys: ['uid', 'qid', 'dataset', 'duration', 'domain', 'sub_category', 'task_type', 'video_id', 'videoID', 'video', 'video_path', 'question', 'raw_question', 'options', 'answer']
+has_caption: False
+[OK] /home/ubuntu/videomind/VideoMind/datasets/video_mme/videomme_local_medium_long_50.json
+rows: 50
+keys: ['video_id', 'duration', 'domain', 'sub_category', 'url', 'videoID', 'question_id', 'task_type', 'question', 'options', 'answer', 'video_path', 'uid', 'qid', 'video', 'dataset']
+has_caption: False
+[OK] /home/ubuntu/videomind/VideoMind/datasets/video_mme/videomme_local_all.json
+rows: 138
+keys: ['video_id', 'duration', 'domain', 'sub_category', 'url', 'videoID', 'question_id', 'task_type', 'question', 'options', 'answer', 'video_path', 'uid', 'qid', 'video', 'dataset']
+has_caption: False
+
+===== 2. Check Video-MME local videos =====
+Video-MME video files: 0
+
+===== 3. Check MLVU annotations =====
+[OK] /home/ubuntu/videomind/VideoMind/datasets/mlvu_dev/splits/custom_test_part8_50.json
+rows: 50
+keys: ['uid', 'source', 'data_type', 'video_path', 'query', 'question', 'options', 'answer', 'ans', 'task', '_zip_inner_path', '_video_basename']
+has_caption: False
+[OK] /home/ubuntu/videomind/VideoMind/datasets/mlvu_dev/splits/part1_chunks/chunk_000.json
+rows: 89
+keys: ['uid', 'source', 'data_type', 'video_path', 'query', 'question', 'options', 'answer', 'ans', 'task', 'duration', '_zip_inner_path', '_video_part', '_video_size']
+has_caption: False
+
+===== 4. Check MLVU local videos =====
+MLVU video files: 0
+
+===== 5. Check old outputs =====
+[MISS] /home/ubuntu/videomind/VideoMind/VideoMind-xinG3/outputs_mlvu/baseline_final_part1_8_all2174/output.json
+[MISS] /home/ubuntu/videomind/VideoMind/VideoMind-xinG3/analysis_mlvu/mlvu_final_part1_8_all2174_score3_compare.json
+[MISS] /home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/output/videomme_full_merged/baseline_videomme_full_all2700_blip_f12_qwen25_7b.json
+
+===== Conclusion =====
+Video-MME cannot run valid MOP now: no local videos and no captions.
+MLVU cannot run valid MOP now: no local videos and no captions.
+

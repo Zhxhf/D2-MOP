@@ -1,0 +1,46 @@
+nohup: ignoring input
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+Namespace(dataset='nextqa', data_path='data/nextqa/llava1.5_fps1.json', anno_path='data/nextqa/val.csv', duration_path='data/nextqa/durations.json', fps=0.5, caption_every=2, num_examples_to_run=-1, output_base_path='output/article2_nextqa_full', output_filename='05_question_only_bias_-1.json', model='/home/ubuntu/videomind/VideoMind/model_zoo/Qwen2.5-7B-Instruct', api_key='', temperature=0.0, max_new_tokens=96, load_in_4bit=True, trust_remote_code=True, torch_dtype='float16', free_answer_mode='llm', matcher_mode='llm', question_only=True, shuffle_choices=False, disable_logic=True, disable_repair=True, seed=42, start_from_scratch=True, disable_eval=False, save_every=20, save_info=False)
+Traceback (most recent call last):
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 181, in <module>
+    launch()
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 111, in launch
+    model = get_model(args)
+            ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/model.py", line 36, in get_model
+    return HFChat(args)
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/model.py", line 114, in __init__
+    self.model = AutoModelForCausalLM.from_pretrained(self.model_name, **model_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3963, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 102, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. 
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+Namespace(dataset='nextqa', data_path='data/nextqa/llava1.5_fps1.json', anno_path='data/nextqa/val.csv', duration_path='data/nextqa/durations.json', fps=0.5, caption_every=2, num_examples_to_run=-1, output_base_path='output/article2_nextqa_full', output_filename='06_choice_shuffle_-1.json', model='/home/ubuntu/videomind/VideoMind/model_zoo/Qwen2.5-7B-Instruct', api_key='', temperature=0.0, max_new_tokens=96, load_in_4bit=True, trust_remote_code=True, torch_dtype='float16', free_answer_mode='llm', matcher_mode='llm', question_only=False, shuffle_choices=True, disable_logic=True, disable_repair=True, seed=42, start_from_scratch=True, disable_eval=False, save_every=20, save_info=False)
+Traceback (most recent call last):
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 181, in <module>
+    launch()
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/article2_trustqa.py", line 111, in launch
+    model = get_model(args)
+            ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/model.py", line 36, in get_model
+    return HFChat(args)
+           ^^^^^^^^^^^^
+  File "/home/ubuntu/videomind/VideoMind/LANZHOUhuiyi/D2p/LLoVi_article2_trustqa_4090/model.py", line 114, in __init__
+    self.model = AutoModelForCausalLM.from_pretrained(self.model_name, **model_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3963, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "/home/ubuntu/miniconda3/envs/uav/lib/python3.11/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 102, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. 
+Wrote output/article2_nextqa_full/summary_-1.csv and output/article2_nextqa_full/summary_-1.md

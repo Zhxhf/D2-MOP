@@ -1,0 +1,28 @@
+SEAC-VQA code modification summary
+==================================
+
+Added a new method line while keeping the original LLoVi / TrustQA files intact.
+
+New files:
+- seac_utils.py
+- article2_seac_vqa.py
+- eval_seac_compare.py
+- tune_seac_thresholds.py
+- run_seac_debug.sh
+- run_seac_nextqa_with_existing_baseline.sh
+- run_llovi_direct_nextqa_gpu1.sh
+- README_SEAC_VQA.md
+
+Main idea:
+- Keep the LLoVi-direct baseline as the default answer.
+- Convert each option into a verifiable hypothesis.
+- Retrieve caption evidence for each question-option hypothesis.
+- Score support / contradiction / missing / temporal consistency.
+- Apply counterfactual calibration for question-only, option-only, and position bias.
+- Override the baseline only when calibrated evidence is strong enough.
+
+Smoke-tested commands:
+- bash run_seac_debug.sh
+- N=50 OUTDIR=output/seac_nextqa_50 bash run_seac_nextqa_with_existing_baseline.sh
+
+The default threshold is conservative to avoid damaging a strong baseline. Use tune_seac_thresholds.py only on a development/calibration split.
